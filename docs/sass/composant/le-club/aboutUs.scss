@@ -1,0 +1,136 @@
+/*
+* TODO: Ce fichier contient les instruction liées à la section qui sommes-nous dans la page leclub
+*/
+
+
+/******************************************************************
+import helper
+******************************************************************/
+@import '../../helper/mixins.scss';
+@import '../../helper/modifier.scss';
+@import '../../helper/variable.scss';
+
+
+/******************************************************************
+Qui sommes-nous ?
+******************************************************************/
+.about {
+    padding: 4% 0 0 0;
+    min-height: 60vh;
+    @include positionFlex ($ligne, space-around, $start);
+
+    &--content,
+    &--picture {
+        max-width: 35%;
+    }
+
+    &--content--title {
+        padding: 0 0 5% 0;
+    }
+}
+
+
+/******************************************************************
+Media queries tablette large, desktop small,
+******************************************************************/
+@media screen and (min-width: 990px) and (max-width: 1199px) {
+    .about {
+        align-items: center;
+        min-height: 40vh; 
+
+        &--content {
+
+            &--title {
+                .is_title_second {
+                    font-size: 1.5em;
+                }
+            }
+
+            &--text {
+                .is_text_white_light {
+                    font-size: 1em;
+                }
+            }
+        }
+    }
+}
+
+
+/******************************************************************
+Media queries tablette
+******************************************************************/
+@media screen and (min-width: 768px) and (max-width: 989px) {
+    .about {
+        
+        &--content {
+
+            &--text {
+                .is_text_white_light {
+                    font-size: 1em!important;
+                }
+            }
+        }
+
+        &--picture {
+            align-self: center;
+        }
+    }
+}
+
+
+/******************************************************************
+Media queries phone
+******************************************************************/
+@media screen and (min-width: 596px) and (max-width: 767px) {
+    .about {
+        flex-direction: column;
+
+        &--content {
+
+            &--title {
+                text-align: center;
+                width: 100vw;
+            }
+            &--text {
+                width: 100vw;
+                .is_text_white_light {
+                    margin: 4% 1%;
+                    text-align: center;
+                }
+            }
+        }
+
+        &--picture {
+            align-self: center;
+        }
+    }
+}
+
+
+/******************************************************************
+Media queries phone small
+******************************************************************/
+@media screen and (max-width: 595px) {
+    .about {
+        flex-direction: column;
+
+        &--content {
+
+            &--title {
+                text-align: center;
+                width: 100vw;
+            }
+            &--text {
+                width: 100vw;
+                .is_text_white_light {
+                    margin: 4% 1%;
+                    text-align: center;
+                }
+            }
+        }
+
+        &--picture {
+            align-self: center;
+        }
+    }
+}

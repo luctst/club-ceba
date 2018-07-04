@@ -1,0 +1,95 @@
+/*
+* TODO: Ce fichier regroupe les instructions liées à la section étapes de la page d'accueil
+*/
+
+
+/******************************************************************
+Import helper
+******************************************************************/
+@import '../../helper/mixins.scss';
+@import '../../helper/modifier.scss';
+@import '../../helper/variable.scss';
+
+
+/******************************************************************
+Étape
+******************************************************************/
+.etape {
+    background: $darkBlue;
+    padding-left: 0;
+    padding-right: 0;
+    @include positionFlex ($ligne, $middle, $middle);
+    min-height: 30vh;
+
+    &--item {
+        @include positionFlex ($colonne, $middle, baseline);
+        min-height: inherit;
+        padding: 0 5% 0 3%;
+
+        &:nth-of-type(1) {
+            background: $green;
+        }
+
+        &:nth-of-type(2) {
+            background: $middleBlue;
+        }
+
+        &:nth-of-type(3) {
+           background: $lightBlue;
+        }
+    }
+}
+
+
+/******************************************************************
+Media queries desktop extra large
+******************************************************************/
+@media screen and (min-width: 1200px) and (max-width: 1500px) {
+    .etape {
+        min-height: 35vh;
+    }
+}
+
+
+/******************************************************************
+Media queries tablette large, desktop small,
+******************************************************************/
+@media screen and (min-width: 990px) and (max-width: 1199px) {
+    .etape {
+        min-height: 35vh;
+    }
+}
+
+
+/******************************************************************
+Media queries tablette
+******************************************************************/
+@media screen and (min-width: 768px) and (max-width: 989px) {
+    .etape {
+        min-height: 35vh;
+    }
+}
+
+
+/******************************************************************
+Media queries phone
+******************************************************************/
+@media screen and (min-width: 596px) and (max-width: 767px) {
+    .etape {
+        min-height: 30vh;
+    }
+}
+
+
+/******************************************************************
+Media queries phone small
+******************************************************************/
+@media screen and (max-width: 595px) {
+    .etape {
+        flex-direction: column;
+
+        &--item {
+            width: 100vw;
+        }
+    }
+}

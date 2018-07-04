@@ -1,0 +1,89 @@
+/*
+* TODO: Ce fichier regroupe les instructions pour la section nos mission présents sur la page d'accueil
+*/
+
+
+/******************************************************************
+Import helper
+******************************************************************/
+@import '../../helper/mixins.scss';
+@import '../../helper/modifier.scss';
+@import '../../helper/variable.scss';
+
+
+/******************************************************************
+Nos missions
+/******************************************************************/
+.mission {
+    height: 60vh;
+    margin: 5% 0 0;
+
+    &--wrapper--title {
+        h2 {
+            text-align: center;
+        }
+    }
+
+    &--wrapper--content {
+        margin-top: 6%;
+
+        .slick-prev,
+        .slick-next {
+            width: 70px;
+            height: 70px;
+            z-index: 20;
+
+            &::before {
+                color: $noir;
+                font-size: 35px;
+            }
+        }
+
+        .slick-list {
+
+            .slick-track {
+
+                .mission--wrapper--content--item {
+                    p:first-child {
+                        margin: 0 auto;
+                        width: 20%;
+                    }
+                    p {
+                        margin: 5% 0;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/******************************************************************
+Media queries tablette
+******************************************************************/
+@media screen and (min-width: 768px) and (max-width: 989px) {
+    .mission {
+        height: 50vh;
+    }
+}
+
+
+/******************************************************************
+Media queries phone
+******************************************************************/
+@media screen and (min-width: 596px) and (max-width: 767px) {
+    .mission {
+        height: 45vh;
+    }
+}
+
+
+/******************************************************************
+Media queries phone small
+******************************************************************/
+@media screen and (max-width: 595px) {
+    .mission {
+        height: 45vh;
+    }
+}

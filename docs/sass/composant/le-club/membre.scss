@@ -1,0 +1,164 @@
+/*
+* TODO: Ce fichier contient les instructions liées à la section les membres du bureau de la page le club
+*/
+
+
+/******************************************************************
+import helper
+******************************************************************/
+@import '../../helper/mixins.scss';
+@import '../../helper/modifier.scss';
+@import '../../helper/variable.scss';
+
+
+/******************************************************************
+Membres du bureau
+******************************************************************/
+.membre {
+    padding: 0;
+    @include positionFlex ($colonne, $start, $middle);
+
+    &--team {
+        flex-wrap: wrap;
+        padding: 5% 0 0 0;
+        width: inherit;
+        @include positionFlex ($ligne, stretch, stretch);
+
+        &--cedric {
+            background: $green;
+        }
+        &--philippe {
+            background: $middleBlue;
+        }
+        &--perrine {
+            background: $lightBlue;
+        }
+        &--dominique {
+            background: $darkBlue;
+        }
+
+        &--cedric,
+        &--philippe,
+        &--perrine,
+        &--dominique {
+            flex: 0 0 50%;
+            @include positionFlex ($ligne, space-between, stretch);
+
+            &--content {
+                padding: 2%;
+            }
+        }
+    }
+}
+
+
+/******************************************************************
+Media queries tablette large, desktop small,
+******************************************************************/
+@media screen and (min-width: 990px) and (max-width: 1199px) {
+    .membre {
+
+        &--team {
+
+            &--cedric,
+            &--philippe,
+            &--perrine,
+            &--dominique {
+                flex: 0 0 100%;
+                justify-content: stretch;
+                
+                &--content {
+                    margin: 2% auto;
+                    padding: 0;
+                }
+            }
+        }
+    }
+}
+
+
+/******************************************************************
+Media queries tablette
+******************************************************************/
+@media screen and (min-width: 768px) and (max-width: 989px) {
+    .membre {
+
+        &--team {
+
+            &--cedric,
+            &--philippe,
+            &--perrine,
+            &--dominique {
+                flex: 0 0 100%;
+                justify-content: stretch;
+                
+                &--content {
+                    margin: 2% auto;
+                    padding: 0;
+                }
+            }
+        }
+    }
+}
+
+
+/******************************************************************
+Media queries phone
+******************************************************************/
+@media screen and (min-width: 596px) and (max-width: 767px) {
+    .membre {
+
+        &--team {
+
+            &--cedric,
+            &--philippe,
+            &--perrine,
+            &--dominique {
+                flex: 0 0 100%;
+                flex-direction: column;
+                height: 70vh;
+                justify-content: space-between;
+
+                &--img {
+                    margin: 0 auto;
+                }
+                
+                &--content {
+                    padding: 0;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+
+/******************************************************************
+Media queries phone small
+******************************************************************/
+@media screen and (max-width: 595px) {
+    .membre {
+
+        &--team {
+
+            &--cedric,
+            &--philippe,
+            &--perrine,
+            &--dominique {
+                flex: 0 0 100%;
+                flex-direction: column;
+                height: 70vh;
+                justify-content: space-between;
+
+                &--img {
+                    margin: 0 auto;
+                }
+                
+                &--content {
+                    padding: 0;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

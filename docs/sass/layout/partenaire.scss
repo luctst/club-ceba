@@ -1,0 +1,94 @@
+/*
+* TODO: Ce fichier contient les instructions pour la section nos partenaires des pages
+*/
+
+
+/******************************************************************
+Import helper
+******************************************************************/
+@import '../helper/mixins.scss';
+@import '../helper/modifier.scss';
+@import '../helper/variable.scss';
+
+
+/******************************************************************
+Nos partenaires
+******************************************************************/
+.partenaire {
+    height: 60vh;
+    margin: 5% 0 0;
+
+    &--title {
+        h2 {
+            text-align: center;
+        }
+    }
+
+    &--slider {
+        margin-top: 8%;
+
+        .slick-prev,
+        .slick-next {
+            width: 70px;
+            height: 70px;
+            z-index: 20;
+
+            &::before {
+                color: $noir;
+                font-size: 35px;
+            }
+        }
+
+        .slick-list {
+
+            .slick-track {
+
+                .partenaire--slider--item {
+                    padding: 0 1%;
+                    img {
+                        height: 150px;
+                    }
+                }
+            }
+        }
+
+        .slick-dots {
+            .slick-active > button::before {
+                color: $green;
+            }
+            li > button::before {
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+
+/******************************************************************
+Media queries tablette
+******************************************************************/
+@media screen and (min-width: 768px) and (max-width: 989px) {
+    .partenaire {
+        height: 50vh;
+    }
+}
+
+
+/******************************************************************
+Media queries phone
+******************************************************************/
+@media screen and (min-width: 596px) and (max-width: 767px) {
+    .partenaire {
+        height: 45vh;
+    }
+}
+
+
+/******************************************************************
+Media queries phone small
+******************************************************************/
+@media screen and (max-width: 595px) {
+    .partenaire {
+        height: 45vh;
+    }
+}

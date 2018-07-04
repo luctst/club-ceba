@@ -1,0 +1,40 @@
+/*
+* TODO: Ce fichier est le fichier principal ou tous les autres fichiers SASS sont importés
+*/
+
+
+/******************************************************************
+Import composant
+******************************************************************/
+@import './composant/annuaire/contentList.scss';
+@import './composant/annuaire/sidebar.scss';
+@import './composant/commission/annuaireAdherent.scss';
+@import './composant/commission/backgroundAndBox.scss';
+@import './composant/commission/commWRP.scss';
+@import './composant/commission/devEco.scss';
+@import './composant/commission/emploi.scss';
+@import './composant/commission/juridiqueAndSoutien.scss';
+@import './composant/commission/newAdherent.scss';
+@import './composant/home/etape.scss';
+@import './composant/home/generateurContact.scss';
+@import './composant/home/nosMission.scss';
+@import './composant/le-club/aboutUs.scss';
+@import './composant/le-club/bureau.scss';
+@import './composant/le-club/membre.scss';
+
+
+/******************************************************************
+lImport layout
+******************************************************************/
+@import './layout/bandeau.scss';
+@import './layout/contentAndBoxCta.scss';
+@import './layout/floatLine.scss';
+@import './layout/footer.scss';
+@import './layout/header.scss';
+@import './layout/partenaire.scss';
+
+
+/******************************************************************
+Import shame ouhh le fichier de la honte
+******************************************************************/
+@import './shame.scss';

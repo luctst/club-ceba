@@ -1,0 +1,157 @@
+/*
+* TODO: Ce fichier contient les instructions pour la section content plus box avec CTA.
+*/
+
+
+/******************************************************************
+import helper
+******************************************************************/
+@import '../helper/mixins.scss';
+@import '../helper/modifier.scss';
+@import '../helper/variable.scss';
+
+
+/******************************************************************
+Page le club, notre CVTheque,
+******************************************************************/
+.contentAndBoxCta--leClub {
+    min-height: 60vh;
+    @include positionFlex ($ligne, $middle, $middle);
+
+    &--content {
+        flex: 0 0 51%;
+        padding: 0 15% 0 0;
+
+        h2 {
+            padding: 0 0 4% 0;
+        }
+
+        p:nth-of-type(2) {
+            margin: 0;
+        }
+    }
+
+    &--box {
+        background: $gray;
+        border-radius: 2%;
+        flex: 0 0 29%;
+        padding: 1%;
+        @include positionFlex ($colonne, $start, safe);
+
+        p {
+            text-align: $middle;
+        }
+    }
+}
+
+
+/******************************************************************
+Page commission, forum des métiers
+******************************************************************/
+.contentAndBoxCta--commission {
+    min-height: 60vh;
+    @include positionFlex ($ligne, $middle, $middle);
+
+    &--content {
+        flex: 0 0 51%;
+        padding: 0 15% 0 0;
+
+        h2 {
+            padding: 0 0 4% 0;
+        }
+    }
+
+    &--box {
+        background: $gray;
+        border-radius: 2%;
+        flex: 0 0 29%;
+        padding: 2%;
+        @include positionFlex ($colonne, $start, safe);
+
+        p {
+            text-align: $middle;
+        }
+    }
+}
+
+
+/******************************************************************
+Media queries tablette large, desktop small,
+******************************************************************/
+@media screen and (min-width: 990px) and (max-width: 1199px) {
+    .contentAndBoxCta--commission,
+    .contentAndBoxCta--leClub {
+        min-height: 60vh;
+    }
+}
+
+
+/******************************************************************
+Media queries tablette
+******************************************************************/
+@media screen and (min-width: 768px) and (max-width: 989px) {
+    .contentAndBoxCta--commission,
+    .contentAndBoxCta--leClub {
+
+        &--content {
+            flex: 0 0 45%;
+
+            .is_title_second {
+                font-size: 1.5em;
+            }
+            .is_text_white_light {
+                font-size: 1em;
+            }
+        }
+
+        &--box {
+            flex: 0 0 48%;
+        }
+    }
+}
+
+
+/******************************************************************
+Media queries phone
+******************************************************************/
+@media screen and (min-width: 596px) and (max-width: 767px) {
+    .contentAndBoxCta--commission,
+    .contentAndBoxCta--leClub {
+        flex-direction: column;
+        min-height: 80vh;
+        justify-content: space-around;
+        align-items: center;
+
+        &--content {
+            padding: 0;
+            text-align: center;
+        }
+
+        &--box {
+            padding: 4%;
+        }
+    }
+}
+
+
+/******************************************************************
+Media queries phone small
+******************************************************************/
+@media screen and (max-width: 595px) {
+    .contentAndBoxCta--commission,
+    .contentAndBoxCta--leClub  {
+        flex-direction: column;
+        min-height: 80vh;
+        justify-content: space-around;
+        align-items: center;
+
+        &--content {
+            padding: 0;
+            text-align: center;
+        }
+
+        &--box {
+            padding: 4%;
+        }
+    }
+ }

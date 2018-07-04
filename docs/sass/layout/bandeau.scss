@@ -1,0 +1,59 @@
+/*
+* TODO: Ce fichier contient les instructions pour la bandeau adhérer au dessus du footer
+*/
+
+
+/******************************************************************
+Import helper
+******************************************************************/
+@import '../helper/mixins.scss';
+@import '../helper/modifier.scss';
+@import '../helper/variable.scss';
+
+
+/******************************************************************
+Bandeau
+******************************************************************/
+.bandeau {
+    min-height: 10vh;
+    @include setBackground ($green);
+    @include positionFlex ($ligne, $middle, $middle);
+
+    div {
+        padding: 0 1%;
+
+        p {
+            margin: 0;
+        }
+    }
+}
+
+
+/******************************************************************
+Media queries tablette large, desktop small,
+******************************************************************/
+@media screen and (min-width: 990px) and (max-width: 1199px) {
+    .bandeau {
+        min-height: 10vh;
+    }
+}
+
+
+/******************************************************************
+Media queries phone
+******************************************************************/
+@media screen and (min-width: 596px) and (max-width: 767px) {
+    .bandeau {
+        min-height: 8vh;
+    }
+}
+
+
+/******************************************************************
+Media queries phone small
+******************************************************************/
+@media screen and (max-width: 595px) {
+    .bandeau {
+        min-height: 8vh;
+    }
+}

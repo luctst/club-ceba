@@ -1,0 +1,106 @@
+/*
+* TODO: Ce fichier contient toutes les instructions liées à la section des listes d'entreprises de la page annuaire.
+*/
+
+
+/******************************************************************
+Import helper
+******************************************************************/
+@import '../../helper/mixins.scss';
+@import '../../helper/modifier.scss';
+@import '../../helper/variable.scss';
+
+
+/******************************************************************
+Liste entreprise
+******************************************************************/
+.company {
+@include positionFlex ($ligne, space-between, stretch);
+
+    &--list {
+        flex: 0 0 45%;
+        margin: 5% 0 0 0;
+
+        &--item {
+            background: $gray;
+            border-radius: 2%;
+            margin: 0 0 10% 0;
+            padding: 4%;
+
+            :last-child {
+                text-align: center;
+            }
+        }
+    }
+
+
+    &--sidebar {
+        border-left: 1px solid $noir;
+        flex: 0 0 30%;
+        padding: 0 1%;
+
+        :first-child {
+            margin: 9% 0 0 0;
+        }
+
+        &--actu,
+        &--categorie,
+        &--archive {
+            border-bottom: 1px solid $noir;
+            padding: 5% 0;
+        }
+
+        h2 {
+            font-size: 1.2em;
+            text-transform: uppercase;
+        }
+    }
+}
+
+
+/******************************************************************
+Media queries tablette
+******************************************************************/
+@media screen and (min-width: 768px) and (max-width: 989px) {
+    .company {
+        &--list {
+            flex-basis: 55%;
+        }
+    }
+}
+
+
+/******************************************************************
+Media queries phone
+******************************************************************/
+@media screen and (min-width: 596px) and (max-width: 767px) {
+    .company {
+        flex-direction: column;
+
+        &--sidebar {
+            border-left: 0;
+
+            &--archive {
+                border-bottom: 0;
+            }
+        }
+    }
+}
+
+
+/******************************************************************
+Media queries phone small
+******************************************************************/
+@media screen and (max-width: 595px) {
+    .company {
+        flex-direction: column;
+
+        &--sidebar {
+            border-left: 0;
+
+            &--archive {
+                border-bottom: 0;
+            }
+        }
+    }
+}

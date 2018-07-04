@@ -1,0 +1,35 @@
+/*
+* TODO: Ce fichier contient les instructions pour le header des pages.
+*/
+
+
+/******************************************************************
+Import helper
+******************************************************************/
+@import '../helper/variable.scss';
+@import '../helper/mixins.scss';
+
+
+/******************************************************************
+Header
+******************************************************************/
+.header {
+    &--nav {
+        @include positionFlex ($ligne, $start, $middle);
+    }
+}
+
+.header--nav {
+    .nav--logo {
+        margin-right: $auto;
+    }
+
+    .nav--menu {
+        @include positionFlex ($ligne, $end, $middle);
+
+        & > p > a {
+            padding: 0 $unEm;
+        }
+    }
+}
+

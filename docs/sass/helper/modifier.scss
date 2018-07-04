@@ -1,0 +1,203 @@
+/*
+* TODO: Ce fichier regroupe toutes les instructions modifier CAD qui vont venir styliser une partie des composants
+*/
+
+
+/******************************************************************
+Import helper
+******************************************************************/
+@import './variable.scss';
+
+
+/******************************************************************
+Bouton
+******************************************************************/
+
+
+/**********************************
+is_btn_circle_green
+************************************/
+.is_btn_circle_green {
+    background: $green;
+    border-radius: 500px;
+    padding: 10px 50px 12px;
+}
+
+.is_btn_circle_green > a {
+    color: $white;
+    font-size: $unEm;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+/**********************************
+is_btn_circle_light_blue
+************************************/
+.is_btn_circle_light_blue {
+    background: $lightBlue;
+    border-radius: 500px;
+    padding: 10px 50px 12px;
+}
+
+.is_btn_circle_light_blue > a {
+    color: $white;
+    font-size: $unEm;
+    font-weight: bold;
+    text-transform: uppercase
+}
+
+
+/**********************************
+is_btn_circle_dark_blue
+************************************/
+.is_btn_circle_dark_blue {
+    background: $darkBlue;
+    border-radius: 500px;
+    padding: 10px 50px 12px;
+}
+
+.is_btn_circle_dark_blue > a {
+    color: $white;
+    font-size: $unEm;
+    font-weight: bold;
+    text-transform: uppercase
+}
+
+
+/**********************************
+is_btn_rounded_white
+************************************/
+.is_btn_rounded_white {
+    border: 1px solid $white;
+    border-radius: 5%;
+    padding: 5% 30px;
+}
+
+.is_btn_rounded_white > a {
+    color: $white;
+    text-transform: uppercase;
+}
+
+
+/**********************************
+is_btn_rounded_green
+************************************/
+.is_btn_rounded_green {
+    background: $green;
+    border-radius: 5%;
+    padding: 5% 30px;
+}
+
+.is_btn_rounded_green > a {
+    color: $white;
+    text-transform: uppercase;
+}
+
+
+/**********************************
+is_btn_rounded_green
+************************************/
+.is_btn_rounded_green {
+    border: 1px solid $green;
+    border-radius: 5%;
+    padding: 5% 30px;
+}
+
+.is_btn_rounded_green > a {
+    color: $white;
+    text-transform: uppercase;
+}
+
+
+/******************************************************************
+Span
+******************************************************************/
+
+
+/**********************************
+is_span_green
+************************************/
+.is_span_green {
+    color: $green;
+}
+
+
+/******************************************************************
+Text
+******************************************************************/
+
+
+/**********************************
+.is_text_black {
+************************************/
+.is_text_black {
+    color: $noir;
+    font-weight: bold;
+}
+
+
+/**********************************
+.is_text_white_bandeau
+************************************/
+.is_text_white_bandeau {
+    font-size: 1.2em;
+    color: $white;
+    text-transform: uppercase;
+}
+
+
+/**********************************
+.is_text_white_etape
+************************************/
+.is_text_white_etape {
+    color: $white;
+    font-size: 1.5em;
+}
+
+
+
+/**********************************
+.is_text_light
+************************************/
+.is_text_white_light {
+    font-size: 1.1em;
+    color: $noir;
+    font-weight: lighter;
+}
+
+
+/**********************************
+.is_text_white_light_etape
+************************************/
+.is_text_white_light_etape {
+    font-size: 0.9em;
+    color: $white;
+    font-weight: lighter;
+}
+
+
+/******************************************************************
+Title
+******************************************************************/
+
+
+/**********************************
+.is_title_primary
+************************************/
+.is_title_primary {
+    color: $white;
+    font-family: $raleway;
+    font-size: $cinqEm;
+    font-weight: bold;
+}
+
+
+/**********************************
+.is_title_second 
+************************************/
+.is_title_second {
+    color: $noir;
+    font-size: $deuxEm;
+    font-weight: bold;
+}

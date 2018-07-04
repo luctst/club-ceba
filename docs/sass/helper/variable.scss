@@ -1,0 +1,87 @@
+/*
+* TODO: Ce fichier contient toutes les variables utilisés pour le site
+**/
+
+
+/******************************************************************
+Background property
+******************************************************************/
+$noRepeat: no-repeat;
+$repeat: repeat;
+$sizeCover: cover;
+$sizeContain: contain;
+
+
+
+/******************************************************************
+Couleurs
+******************************************************************/
+$darkBlue: #008aab;
+$lightBlue: #00b3e3;
+$middleBlue: #00c1de;
+$noir: #333;
+$green: #009d4e;
+$white: #fff;
+$gray: #eee;
+
+
+/******************************************************************
+Font
+******************************************************************/
+$lato: 'lato';
+$raleway: 'Raleway';
+
+
+/******************************************************************
+Images
+******************************************************************/
+$annuaireFloatLine: url('../img/annuaire/ceba-photo-header-annuaire.jpg');
+$comissionFloatLine: url('../img/comissions/ceba-photo-header-commissions.jpg');
+$comissionIntervalVbe: url('../img/comissions/ceba-photo-commissions.jpg');
+$commissionRelationInstitutionelle: url('../img/comissions/ceba-photo-4-commissions.jpg');
+$commissionReseauxAndClubCompany: url('../img/comissions/ceba-photo-3-commissions.jpg');
+$homepageFloatLine: url('../img/home/homepage-float-line.jpg');
+$homepageGenerateurContact: url('../img/home/generateur-contact-homepage-ceba.jpg');
+$leClubFloatLine: url('../img/le-club/le-club-float-line.jpg');
+
+
+/******************************************************************
+Positions, alignement
+******************************************************************/
+$bas: bottom;
+$droite: right;
+$end: flex-end;
+$etirer: stretch;
+$flex: flex;
+$grid: grid;
+$gauche: left;
+$haut: top;
+$justifier: justify;
+$middle: center;
+$start: flex-start;
+$ligne: row;
+$colonne: column;
+
+
+/******************************************************************
+Tailles
+******************************************************************/
+$headerHeight: 20vh; 
+$floatLineHeight: 80vh;
+$dix: 10%;
+$vingt: 20%;
+$trente: 30%;
+$quarante: 40%;
+$cinquante: 50%;
+$soixante: 60%;
+$soixanteDix:  70%;
+$quatreVingt: 80%;
+$quatreVingtDix: 90%;
+$cent: 100%;
+$auto: auto;
+$unEm: 1em;
+$deuxEm: 2em;
+$troisEm: 3em;
+$quatreEm: 4em;
+$cinqEm: 5em;
+$mqExtraLarge: 60vh;

@@ -1,0 +1,147 @@
+/*
+* TODO: Ce fichier contient les instructions liées à la section emploi de la page commission.
+*/
+
+
+/******************************************************************
+Import helper
+******************************************************************/
+@import '../../helper/mixins.scss';
+@import '../../helper/modifier.scss';
+@import '../../helper/variable.scss';
+
+
+/******************************************************************
+Emploi
+******************************************************************/
+.emploi {
+    min-height: 50vh;
+    @include positionFlex ($colonne, space-around, stretch);
+
+        &--title {
+            @include positionFlex ($colonne, baseline, $middle);
+
+            p {
+                text-align: $middle;
+                margin: 0 30% 0 30%;
+            }
+        }
+
+        &--item {
+            @include positionFlex ($ligne, space-around, baseline);
+
+            &--child {
+                @include positionFlex ($colonne, baseline, $middle);
+            }
+        }
+}
+
+
+/******************************************************************
+Media queries desktop extra large
+******************************************************************/
+@media screen and (min-width: 1200px) and (max-width: 1500px) {
+    .emploi {
+        min-height: $mqExtraLarge;
+    }
+}
+
+
+/******************************************************************
+Media queries tablette large, desktop small,
+******************************************************************/
+@media screen and (min-width: 990px) and (max-width: 1199px) {
+    .emploi {
+
+        &--title {
+            margin: 5% 0;
+
+            p {
+                margin: 0;
+            }
+        }
+
+        &--item {
+            display: initial;
+
+            &--child:last-child {
+                margin: 0 0 5% 0;
+            }
+        }
+    }
+}
+
+
+/******************************************************************
+Media queries tablette
+******************************************************************/
+@media screen and (min-width: 768px) and (max-width: 989px) {
+    .emploi {
+
+        &--title {
+            margin: 5% 0;
+
+            p {
+                margin: 0;
+            }
+        }
+
+        &--item {
+            display: initial;
+
+            &--child:last-child {
+                margin: 0 0 5% 0;
+            }
+        }
+    }
+}
+
+
+/******************************************************************
+Media queries phone
+******************************************************************/
+@media screen and (min-width: 596px) and (max-width: 767px) {
+    .emploi {
+
+        &--title {
+            margin: 5% 0;
+
+            p {
+                margin: 0;
+            }
+        }
+
+        &--item {
+            display: initial;
+
+            &--child:last-child {
+                margin: 0 0 5% 0;
+            }
+        }
+    }   
+}
+
+
+/******************************************************************
+Media queries phone small
+******************************************************************/
+@media screen and (max-width: 595px) {
+    .emploi {
+
+        &--title {
+            margin: 5% 0;
+
+            p {
+                margin: 0;
+            }
+        }
+
+        &--item {
+            display: initial;
+
+            &--child:last-child {
+                margin: 0 0 5% 0;
+            }
+        }
+    } 
+}

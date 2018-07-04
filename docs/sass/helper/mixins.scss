@@ -1,0 +1,23 @@
+/*
+* TODO: Ce fichier regroupe toutes les mixins.
+*/
+
+
+/******************************************************************
+Background
+******************************************************************/
+@mixin setBackground ($args...) {
+    background: $args;
+}
+
+
+
+/******************************************************************
+Position
+******************************************************************/
+@mixin positionFlex ($direction, $mainAxis, $secondAxis) {
+    align-items: $secondAxis;
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $mainAxis;
+}

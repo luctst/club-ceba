@@ -1,0 +1,147 @@
+/*
+* TODO: Ce fichier représente les instructions pour les sections international & VBE, Réseaux et clubs d'entreprises, Relations institutionnelles de la page commission
+*/
+
+
+/******************************************************************
+Import helper
+******************************************************************/
+@import '../../helper/mixins.scss';
+@import '../../helper/modifier.scss';
+@import '../../helper/variable.scss';
+
+
+/******************************************************************
+International & VBE
+******************************************************************/
+.internationalVbe {
+    @include setBackground ($comissionIntervalVbe, $noRepeat);
+    background-size: $sizeCover;
+    min-height: 45vh;
+    @include positionFlex ($ligne, $middle, $middle);
+
+    &--content {
+        background: $white;
+        max-width: 30%;
+        padding: 2%;
+        @include positionFlex ($colonne, $start, $middle);
+
+        &--text {
+            margin: 0 10%;
+        }
+    }
+}
+
+
+/******************************************************************
+Réseaux et company d'entreprises
+******************************************************************/
+.reseauxAndClubCompany {
+    @include setBackground ($commissionReseauxAndClubCompany, $noRepeat);
+    background-size: $sizeCover;
+    min-height: 50vh;
+    @include positionFlex ($ligne, $start, $middle);
+
+    &--content {
+        background: $white;
+        margin: 0 0 0 2%;
+        max-width: 25%;
+        padding: 1% 2%;
+        @include positionFlex ($colonne, $start, $middle);
+    }
+}
+
+
+/******************************************************************
+Relations institutionelles
+******************************************************************/
+.relationInstitutionelle {
+    @include setBackground ($commissionRelationInstitutionelle, $noRepeat);
+    background-size: $sizeCover;
+    min-height: 50vh;
+    @include positionFlex ($ligne, $end, $middle);
+
+    &--content {
+        background: $white;
+        margin: 0 0 0 2%;
+        max-width: 25%;
+        padding: 1% 2%;
+        @include positionFlex ($colonne, $start, $middle);
+    }
+}
+
+
+/******************************************************************
+Media queries desktop extra large
+******************************************************************/
+@media screen and (min-width: 1200px) and (max-width: 1500px) {
+    .internationalVbe,
+    .reseauxAndClubCompany,
+    .relationInstitutionelle {
+        min-height: 70vh;
+    }
+}
+
+
+/******************************************************************
+Media queries tablette large, desktop small,
+******************************************************************/
+@media screen and (min-width: 990px) and (max-width: 1199px) {
+    .internationalVbe,
+    .reseauxAndClubCompany,
+    .relationInstitutionelle {
+        min-height: 65vh;
+
+        &--content {
+            max-width: 40%;
+        }
+    }
+}
+
+
+/******************************************************************
+Media queries tablette
+******************************************************************/
+@media screen and (min-width: 768px) and (max-width: 989px) {
+    .internationalVbe,
+    .reseauxAndClubCompany,
+    .relationInstitutionelle {
+        min-height: 65vh;
+
+        &--content {
+            max-width: 60%;
+        }
+    }
+}
+
+
+/******************************************************************
+Media queries phone
+******************************************************************/
+@media screen and (min-width: 596px) and (max-width: 767px) {
+    .internationalVbe,
+    .reseauxAndClubCompany,
+    .relationInstitutionelle {
+        min-height: 60vh;
+
+        &--content {
+            max-width: 80%;
+        }
+    }
+}
+
+
+/******************************************************************
+Media queries phone small
+******************************************************************/
+@media screen and (max-width: 595px) {
+    .internationalVbe,
+    .reseauxAndClubCompany,
+    .relationInstitutionelle {
+        min-height: 60vh;
+
+        &--content {
+            max-width: 90%;
+        }
+    }
+}

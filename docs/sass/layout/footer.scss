@@ -1,0 +1,37 @@
+/*
+* TODO: Ce fichier contient les instructions liées au footer des pages
+*/
+
+
+
+/******************************************************************
+Import helper
+******************************************************************/
+@import '../helper/mixins.scss';
+@import '../helper/modifier.scss';
+@import '../helper/variable.scss';
+
+
+
+/******************************************************************
+Footer
+******************************************************************/
+.footer {
+    background: #CCC;
+    min-height: 10vh;
+    @include positionFlex ($ligne, $middle, $end);
+
+    &--content > small {
+        color: #eee;
+    }
+}
+
+
+/******************************************************************
+Media queries tablette large, desktop small,
+******************************************************************/
+@media screen and (min-width: 990px) and (max-width: 1199px) {
+    .footer {
+        min-height: 4vh;
+    }
+}

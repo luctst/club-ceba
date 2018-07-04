@@ -1,0 +1,133 @@
+/*
+* TODO: Ce fichier regroupe toutes les instructions liée à la section developpement économique de la page commission.
+*/
+
+
+/******************************************************************
+Import helper
+******************************************************************/
+@import '../../helper/mixins.scss';
+@import '../../helper/modifier.scss';
+@import '../../helper/variable.scss';
+
+
+/******************************************************************
+Developpement economique
+******************************************************************/
+.developpementEco {
+min-height: 50vh;
+@include positionFlex ($colonne, space-around, stretch);
+
+    &--title {
+        @include positionFlex ($colonne, baseline, $middle);
+
+        p {
+            text-align: $middle;
+            margin: 0 30% 0 30%;
+        }
+    }
+
+    &--item {
+        @include positionFlex ($ligne, space-around, baseline);
+
+        &--child {
+            @include positionFlex ($colonne, baseline, $middle);
+        }
+    }
+}
+
+
+/******************************************************************
+Media queries desktop extra large
+******************************************************************/
+@media screen and (min-width: 1200px) and (max-width: 1500px) {
+    .developpementEco {
+        min-height: $mqExtraLarge;
+    }
+}
+
+
+/******************************************************************
+Media queries tablette large, desktop small,
+******************************************************************/
+@media screen and (min-width: 990px) and (max-width: 1199px) {
+    .developpementEco {
+        min-height: 60vh;
+    }
+}
+
+
+/******************************************************************
+Media queries tablette
+******************************************************************/
+@media screen and (min-width: 768px) and (max-width: 989px) {
+    .developpementEco {
+
+        &--title {
+            margin: 5% 0;
+
+            p {
+                margin: 0;
+            }
+        }
+
+        &--item {
+            display: initial;
+        }
+    }
+}
+
+
+/******************************************************************
+Media queries phone
+******************************************************************/
+@media screen and (min-width: 596px) and (max-width: 767px) {
+    .developpementEco {
+
+        &--title {
+            margin: 5% 0;
+
+            p {
+                margin: 0;
+            }
+        }
+
+        &--item {
+            display: initial;
+        }
+    }
+}
+
+
+/******************************************************************
+Media queries phone small
+******************************************************************/
+@media screen and (max-width: 595px) {
+    .is_text_black {
+        font-size: 1.1em;
+    }
+    .developpementEco {
+
+        &--title {
+            margin: 5% 0;
+
+            p {
+                font-size: 1em;
+                margin: 0;
+            }
+        }
+
+        &--item {
+            display: initial;
+
+            &--child {
+                p:nth-of-type(1) {
+                    margin: 5% 0;
+                }
+                p {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

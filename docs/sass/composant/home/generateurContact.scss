@@ -1,0 +1,117 @@
+/**
+* TODO: Ce fichier contient la section genérateur de contact de la page d'accueil
+*/
+
+
+/******************************************************************
+Import helper
+******************************************************************/
+@import '../../helper/variable.scss';
+@import '../../helper/mixins.scss';
+@import '../../helper/modifier.scss';
+
+
+/******************************************************************
+Generateur de contact
+******************************************************************/
+.generateurContact {
+    @include setBackground ($homepageGenerateurContact, $noRepeat);
+    background-size: $sizeCover;
+    min-height: 50vh;
+
+    &--wrapper {
+        @include positionFlex ($ligne, $end, $middle);
+        min-height: inherit;
+
+
+        &--content {
+            @include positionFlex ($colonne, $middle, $start);
+            min-height: inherit;
+            margin-left: $cinquante;
+
+            p:nth-of-type(1) {
+                padding: 5% 0;
+            }
+        }
+    }
+}
+
+
+/******************************************************************
+Media queries desktop extra large
+******************************************************************/
+@media screen and (min-width: 1200px) and (max-width: 1500px) {
+    .generateurContact {
+        min-height: $mqExtraLarge;
+    }
+}
+
+
+/******************************************************************
+Media queries tablette large, desktop small,
+******************************************************************/
+@media screen and (min-width: 990px) and (max-width: 1199px) {
+    .generateurContact {
+        min-height: 50vh;
+    }
+}
+
+
+/******************************************************************
+Media queries tablette
+******************************************************************/
+@media screen and (min-width: 768px) and (max-width: 989px) {
+    .generateurContact {
+        min-height: 50vh;
+    }
+}
+
+
+/******************************************************************
+Media queries phone
+******************************************************************/
+@media screen and (min-width: 596px) and (max-width: 767px) {
+    .is_title_second {
+        font-size: 1.5em!important;
+    }
+    p {
+        font-size: 0.9em;
+    }
+    .is_btn_circle_green > a {
+        font-size: 0.9em!important;
+    }
+    .is_text_white_etape {
+        font-size: 1.3em!important;
+    }
+}
+
+
+/******************************************************************
+Media queries phone small
+******************************************************************/
+@media screen and (max-width: 595px) {
+    .generateurContact {
+
+        &--wrapper {
+
+            &--content {
+                margin: 0;
+            }
+        }
+    }
+    .is_title_second {
+        font-size: 1.3em!important;
+    }
+    .is_btn_circle_green > a {
+        font-size: 0.8em!important;
+    }
+    .is_text_white_etape {
+        font-size: 1.2em!important;
+    }
+    .generateurContact {
+        min-height: 50vh;
+    }
+    .is_text_white_bandeau {
+        font-size: .7em!important;
+    }
+}

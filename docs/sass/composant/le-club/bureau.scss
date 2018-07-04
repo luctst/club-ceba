@@ -1,0 +1,187 @@
+/*
+* TODO: Ce fichier contient les instructions liées à la section le bureau de la pge le club
+*/
+
+
+/******************************************************************
+import helper
+******************************************************************/
+@import '../../helper/mixins.scss';
+@import '../../helper/modifier.scss';
+@import '../../helper/variable.scss';
+
+
+/******************************************************************
+Le bureau
+******************************************************************/
+.bureau {
+    padding: 4% 0 0 0;
+    min-height: 60vh;
+    @include positionFlex ($ligne, space-around, $start);
+
+    &--picture,
+    &--content {
+        max-width: 35%;
+    }
+
+    &--picture {
+        margin:0 6% 0 0;
+
+        img {
+            width: 600px;
+            height: auto;
+        }
+    }
+
+    &--content {
+        margin: 0 19.5% 0 0;
+
+        &--title {
+            padding: 0 0 5% 0;
+        }
+
+        &--text {
+            p:nth-of-type(2), 
+            p:nth-of-type(4) {
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+
+/******************************************************************
+Media queries desktop extra large
+******************************************************************/
+@media screen and (min-width: 1200px) and (max-width: 1500px) {
+    .bureau {
+        
+        &--picture {
+            margin: 0%;
+
+            img {
+                width: 500px;
+                height: auto;
+            }
+        }
+
+        &--content {
+            margin: 0 13.5% 0 0;
+        }
+    }
+}
+
+
+/******************************************************************
+Media queries tablette large, desktop small,
+******************************************************************/
+@media screen and (min-width: 990px) and (max-width: 1199px) {
+    .bureau {
+        align-items: center;
+        min-height: 40vh;
+
+        &--picture {
+            img {
+                width: 400px;
+                height: auto;
+            }
+        }
+
+        &--content {
+            margin: 0;
+
+            &--title {
+                .is_title_second {
+                    font-size: 1.5em;
+                }
+            }
+
+            &--text {
+                p {
+                    font-size: 1em;
+                }
+            }
+        }
+    }
+}
+
+
+/******************************************************************
+Media queries tablette
+******************************************************************/
+@media screen and (min-width: 768px) and (max-width: 989px) {
+    .bureau {
+        flex-direction: column;
+
+        &--picture {
+            margin: 0 6% 0 7%;
+
+            img {
+                width: 400px;
+                height: auto;
+            }
+        }
+
+        &--content {
+            margin: 0 0 0 7%;
+        }
+    }
+}
+
+
+/******************************************************************
+Media queries phone
+******************************************************************/
+@media screen and (min-width: 596px) and (max-width: 767px) {
+    .bureau {
+        flex-direction: column;
+
+        &--picture {
+            img {
+                margin: 0 0 0 50%;
+                width: 400px;
+            }
+        }
+
+        &--content {
+            &--title,
+            &--text {
+                width: 100vw;
+            }
+
+            h2,
+            p {
+                text-align: center;
+            }
+        }
+    }
+}
+
+
+/******************************************************************
+Media queries phone small
+******************************************************************/
+@media screen and (max-width: 595px) {
+    .bureau {
+        flex-direction: column;
+
+        &--picture {
+            img {
+                // margin: 0;
+                width: 400px;
+            }
+        }
+
+        &--content {
+            &--title,
+            &--text {
+                width: 100vw;
+            }
+
+            h2,
+            p {
+                text-align: center;
+            }
+        }
+    }
+}

@@ -1,0 +1,119 @@
+/*
+* TODO: Ce fichier regroupe toutes les instructions liées à la section annuaire des adhérents de la page commission.
+*/
+
+
+/******************************************************************
+Import helper
+******************************************************************/
+@import '../../helper/mixins.scss';
+@import '../../helper/modifier.scss';
+@import '../../helper/variable.scss';
+
+
+/******************************************************************
+Annuaire adhérent
+******************************************************************/
+.annuaireAdherent {
+    @include positionFlex ($ligne, space-around, $middle);
+
+    &--tab {
+        border-right: 1px solid $noir;
+
+        p {
+            border-bottom: 1px solid $noir;
+            font-size: 1.2em;
+            padding: 5% 0;
+            text-transform: uppercase; 
+        }
+
+        :first-child {
+            padding-top: 0;
+        }
+
+        :last-child {
+            margin: 0;
+        }
+    }
+}
+
+
+/******************************************************************
+Media queries desktop extra large
+******************************************************************/
+@media screen and (min-width: 1200px) and (max-width: 1500px) {
+    .annuaireAdherent {
+
+        &--content {
+            margin: 0 5%;
+        }
+    }
+}
+
+
+/******************************************************************
+Media queries tablette large, desktop small,
+******************************************************************/
+@media screen and (min-width: 990px) and (max-width: 1199px) {
+    .annuaireAdherent {
+        flex-wrap: wrap;
+        margin: 5% 0 0 0;
+    }
+}
+
+
+/******************************************************************
+Media queries tablette
+******************************************************************/
+@media screen and (min-width: 768px) and (max-width: 989px) {
+    .annuaireAdherent {
+        flex-wrap: wrap;
+
+        &--tab {
+            border-right: 0;
+        }
+
+        &--tab,
+        &--content {
+            margin: 5% 0;
+        }
+    }
+}
+
+
+/******************************************************************
+Media queries phone
+******************************************************************/
+@media screen and (min-width: 596px) and (max-width: 767px) {
+    .annuaireAdherent {
+        flex-wrap: wrap;
+
+        &--tab {
+            border-right: 0;
+        }
+
+        &--tab,
+        &--content {
+            margin: 5% 0;
+        }
+    }
+}
+
+
+/******************************************************************
+Media queries phone small
+******************************************************************/
+@media screen and (max-width: 595px) {
+    .annuaireAdherent {
+        flex-wrap: wrap;
+
+        &--tab {
+            border-right: 0;
+        }
+
+        &--tab,
+        &--content {
+            margin: 5% 0;
+        }
+    }
+}

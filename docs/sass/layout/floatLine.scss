@@ -1,0 +1,152 @@
+/**
+* TODO: Ce fichier regroupe les différentes variantes des sections (floatLine).
+*/
+
+
+/******************************************************************
+Import helper
+******************************************************************/
+@import '../helper/variable.scss';
+@import '../helper/mixins.scss';
+@import '../helper/modifier.scss';
+
+
+/******************************************************************
+Homepage floatLine
+******************************************************************/
+.floatLine {
+    @include setBackground ($homepageFloatLine, $noRepeat);
+    background-size: $sizeCover;
+    min-height: $floatLineHeight;
+
+    &--wrapper {
+        min-height: inherit;
+        @include positionFlex ($ligne, $start, $middle);
+    }
+}
+
+
+/******************************************************************
+Homepage floatLine
+******************************************************************/
+.floatLine--club {
+    @include setBackground ($leClubFloatLine, $noRepeat);
+    background-size: $sizeCover;
+    min-height: $floatLineHeight;
+
+    &--wrapper {
+        min-height: inherit;
+        @include positionFlex ($ligne, $middle, $middle);
+    }
+}
+
+
+/******************************************************************
+Comission floatLine
+******************************************************************/
+.floatLine--comission {
+    @include setBackground ($comissionFloatLine, $noRepeat);
+    background-size: $sizeCover;
+    min-height: $floatLineHeight;
+
+    &--wrapper {
+        min-height: inherit;
+        @include positionFlex ($ligne, $middle, $middle);
+    }
+}
+
+
+/******************************************************************
+Annuaire floatLine
+******************************************************************/
+.floatLine--annuaire {
+    @include setBackground ($annuaireFloatLine, $noRepeat);
+    background-size: $sizeCover;
+    min-height: $floatLineHeight;
+
+    &--wrapper {
+        min-height: inherit;
+        @include positionFlex ($ligne, $middle, $middle);
+    }
+}
+
+
+/******************************************************************
+Media queries desktop extra large
+******************************************************************/
+@media screen and (min-width: 1200px) and (max-width: 1500px) {
+    .floatLine,
+    .floatLine--club,
+    .floatLine--comission,
+    .floatLine--annuaire  {
+        min-height: 75vh;
+    }
+}
+
+
+/******************************************************************
+Media queries tablette large, desktop small,
+******************************************************************/
+@media screen and (min-width: 990px) and (max-width: 1199px) {
+    .floatLine,
+    .floatLine--club,
+    .floatLine--comission,
+    .floatLine--annuaire {
+        min-height: 55vh;
+    }
+
+    h1 {
+        font-size: 4em!important;
+    }
+}
+
+
+/******************************************************************
+Media queries tablette
+******************************************************************/
+@media screen and (min-width: 768px) and (max-width: 989px) {
+    .floatLine,
+    .floatLine--club,
+    .floatLine--comission,
+    .floatLine--annuaire {
+        min-height: 50vh;
+    }
+
+    h1 {
+        font-size: 4em!important;
+    }
+}
+
+
+/******************************************************************
+Media queries phone
+******************************************************************/
+@media screen and (min-width: 596px) and (max-width: 767px) {
+    .floatLine,
+    .floatLine--club,
+    .floatLine--comission,
+    .floatLine--annuaire {
+        min-height: 50vh;
+
+        h1 {
+            font-size: 3em!important;
+        }
+    }
+}
+
+
+/******************************************************************
+Media queries phone small
+******************************************************************/
+@media screen and (max-width: 595px) {
+    .floatLine,
+    .floatLine--club,
+    .floatLine--comission,
+    .floatLine--annuaire {
+        min-height: 35vh;
+
+        h1 {
+            font-size: 2em!important;
+        }
+    }
+}

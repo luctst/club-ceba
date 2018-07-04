@@ -1,0 +1,194 @@
+/*
+TODO: Ce fichier regroupe les instructions pour la section juridique et soutien aux entreprises de la page commission.
+*/
+
+
+/******************************************************************
+Import helper
+******************************************************************/
+@import '../../helper/mixins.scss';
+@import '../../helper/modifier.scss';
+@import '../../helper/variable.scss';
+
+
+/******************************************************************
+Juridique et soutien aux entreprises
+******************************************************************/
+.juridiqueAndSoutien {
+    padding-left: 0;
+    @include positionFlex ($ligne, space-around, stretch);
+
+
+    &--content {
+        @include positionFlex ($colonne, $start, stretch);
+
+        &--colonne {
+            @include positionFlex ($ligne, $start, stretch);
+            flex-wrap: wrap;
+
+            &--item {
+                flex: 0 0 50%;
+                margin: 2% 0;
+            }
+        }
+    }
+}
+
+/******************************************************************
+Media queries desktop extra large
+******************************************************************/
+@media screen and (min-width: 1200px) and (max-width: 1500px) {
+    .juridiqueAndSoutien {
+        min-height: 80vh;
+
+        &--content {
+            margin: 0 0 0 5%;
+        }
+    }
+}
+
+
+/******************************************************************
+Media queries tablette large, desktop small,
+******************************************************************/
+@media screen and (min-width: 990px) and (max-width: 1199px) {
+    .juridiqueAndSoutien {
+        flex-wrap: wrap;
+
+        &--picture {
+            flex: 0 0 40%;
+        }
+
+        &--content {
+            margin: 5% 0 0 4%;
+
+
+            h2,
+            p {
+                text-align: center;
+            }
+    
+            &--colonne {
+                align-items: center;
+    
+                &--item {
+                    margin: 2% auto;
+    
+                    p {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/******************************************************************
+Media queries tablette
+******************************************************************/
+@media screen and (min-width: 768px) and (max-width: 989px) {
+    .juridiqueAndSoutien {
+        flex-wrap: wrap;
+
+        &--picture {
+            flex: 0 0 40%;
+        }
+
+        &--content {
+            margin: 5% 0 0 4%;
+
+
+            h2,
+            p {
+                text-align: center;
+            }
+    
+            &--colonne {
+                align-items: center;
+    
+                &--item {
+                    margin: 2% auto;
+    
+                    p {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    } 
+}
+
+
+/******************************************************************
+Media queries phone
+******************************************************************/
+@media screen and (min-width: 596px) and (max-width: 767px) {
+    .juridiqueAndSoutien {
+        flex-wrap: wrap;
+
+        &--picture {
+            flex: 0 0 40%;
+        }
+
+        &--content {
+            margin: 5% 0 0 0;
+
+
+            h2,
+            p {
+                text-align: center;
+            }
+    
+            &--colonne {
+                flex-direction: column;
+    
+                &--item {
+                    flex: 0;
+                    margin: 2% auto;
+    
+                    p {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    } 
+}
+
+
+/******************************************************************
+Media queries phone small
+******************************************************************/
+@media screen and (max-width: 595px) {
+    .juridiqueAndSoutien {
+        flex-wrap: wrap;
+
+        &--picture {
+            flex: 0 0 40%;
+        }
+
+        &--content {
+            margin: 5% 0 0 0;
+
+
+            h2,
+            p {
+                text-align: center;
+            }
+    
+            &--colonne {
+                flex-direction: column;
+    
+                &--item {
+                    flex: 0;
+                    margin: 2% auto;
+    
+                    p {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    } 
+}
